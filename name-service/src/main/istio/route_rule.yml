@@ -2,6 +2,7 @@ apiVersion: config.istio.io/v1alpha1
 kind: RouteRule
 metadata:
   name: spring-boot-circuit-breaker-name-default
+  namespace: demo-istio
 spec:
   destination:
     name: spring-boot-circuit-breaker-name
