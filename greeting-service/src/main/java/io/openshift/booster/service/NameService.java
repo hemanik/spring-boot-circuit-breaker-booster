@@ -40,7 +40,9 @@ public class NameService {
     
     public String getName() {
         try {
-            return restTemplate.getForObject(nameHost + "/api/name", String.class);
+            final String name = restTemplate.getForObject(nameHost + "/api/name", String.class);
+            isCBOpen.set(false); // if call went thru, CB is closed
+            return name;
         } catch (RestClientException e) {
             if (e instanceof HttpServerErrorException) {
                 HttpServerErrorException serverError = (HttpServerErrorException) e;
