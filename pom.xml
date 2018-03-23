@@ -34,6 +34,7 @@
   <properties>
     <skip.fmp>true</skip.fmp>
     <org.glassfish.javax.json>1.0.3</org.glassfish.javax.json>
+    <name-service.app>spring-boot-circuit-breaker-name</name-service.app>
   </properties>
 
   <modules>
